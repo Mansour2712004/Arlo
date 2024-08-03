@@ -1,0 +1,651 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    padding-top: 60px;
+}
+
+nav {
+    background-color: white;
+    padding: 5px 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav .nav-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .nav-container img {
+    padding-left: 80px;
+    width: 60px;
+}
+
+nav .nav-container ul{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    padding-top: 10px;
+    width: 45%;
+    justify-content: space-between;
+}
+
+nav .nav-container ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+nav .nav-container ul li a:hover {
+    color: #e65f78;
+}
+
+nav .nav-container ul li .home-li {
+    color: #e65f78;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/bg.png) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    margin: 20px 0 10px;
+    font-size: 3em;
+}
+
+.surname {
+    color: #e65f78;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.animated-text::after {
+    content: "";
+    animation: job 5s linear 0s infinite normal both;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes job{
+
+    /* 
+       From whare I got this percentages ?
+       calc is 100/3 = 33.3333
+       The calc of Freelancer is: (33.3333/11)/2 = 1.51515
+       The calc of Web Developer is: (33.3333/14)/2 = 1.190475 
+       The calc of Photographer is: (33.3333/13)/2 = 1.28205 */
+
+    0% { content: ""; }
+    1.51515% { content: "F"; }
+    3.0303% { content: "Fr"; }
+    4.54545% { content: "Fre"; }
+    6.0606% { content: "Free"; }
+    7.57575% { content: "Freel"; }
+    9.0909% { content: "Freela"; }
+    10.60605% { content: "Freelan"; }
+    12.1212% { content: "Freelanc"; }
+    13.63635% { content: "Freelance"; }
+    15.1515% { content: "Freelancer"; }
+    16.66665% { content: "Freelancer "; }
+    18.1818% { content: "Freelancer"; }
+    19.69695% { content: "Freelance"; }
+    21.2121% { content: "Freelanc"; }
+    22.72725% { content: "Freelan"; }
+    24.2424% { content: "Freela"; }
+    25.75755% { content: "Freel"; }
+    27.2727% { content: "Free"; }
+    28.78785% { content: "Fre"; }
+    30.303% { content: "Fr"; }
+    31.81815% { content: "F"; }
+    33.3333% { content: ""; }
+    34.523775% { content: "W"; }
+    35.71425% { content: "We"; }
+    36.904725% { content: "Web"; }
+    38.0952% { content: "Web "; }
+    39.285675% { content: "Web D"; }
+    40.47615% { content: "Web De"; }
+    41.666625% { content: "Web Dev"; }
+    42.8571% { content: "Web Deve"; }
+    44.047575% { content: "Web Devel"; }
+    45.23805% { content: "Web Develo"; }
+    46.428525% { content: "Web Develop"; }
+    47.619% { content: "Web Develope"; }
+    48.809475% { content: "Web Developer"; }
+    49.99995% { content: "Web Developer "; }
+    51.190425% { content: "Web Developer"; }
+    52.3809% { content: "Web Develope"; }
+    53.571375% { content: "Web Develop"; }
+    54.76185% { content: "Web Develo"; }
+    55.952325% { content: "Web Devel"; }
+    57.1428% { content: "Web Deve"; }
+    58.333275% { content: "Web Dev"; }
+    59.52375% { content: "Web De"; }
+    60.714225% { content: "Web D"; }
+    61.9047% { content: "Web "; }
+    63.095175% { content: "Web"; }
+    64.28565% { content: "We"; }
+    65.476125% { content: "W"; }
+    66.6666% { content: ""; }
+    67.94865% { content: "P"; }
+    69.2307% { content: "Ph"; }
+    70.51275% { content: "Pho"; }
+    71.7948% { content: "Phot"; }
+    73.07685% { content: "Photo"; }
+    74.3589% { content: "Photog"; }
+    75.64095% { content: "Photogr"; }
+    76.923% { content: "Photogra"; }
+    78.20505% { content: "Photograp"; }
+    79.4871% { content: "Photograph"; }
+    80.76915% { content: "Photographe"; }
+    82.0512% { content: "Photographer"; }
+    83.33325% { content: "Photographer "; }
+    84.6153% { content: "Photographer"; }
+    85.89735% { content: "Photographe"; }
+    87.1794% { content: "Photograph"; }
+    88.46145% { content: "Photograp"; }
+    89.7435% { content: "Photogra"; }
+    91.02555% { content: "Photogr"; }
+    92.3076% { content: "Photog"; }
+    93.58965% { content: "Photo"; }
+    94.8717% { content: "Phot"; }
+    96.15375% { content: "Pho"; }
+    97.4358% { content: "Ph"; }
+    98.71785% { content: "P"; }
+    100% { content: ""; }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    
+    margin-bottom: 20px;
+}
+
+.header p {
+    margin: 0;
+    font-size: 18px;
+    color: #ff5e57;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.about-me {
+    display: flex;
+    align-items: flex-start;
+}
+
+.image-container {
+    position: relative;
+    margin-right: 20px;
+}
+
+.image-container img {
+    width: 80%;
+    transition: transform 1s;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    border: 5px solid #000;
+    transition: transform 0.5s;
+}
+
+.image-container:hover img {
+    transform: translate(-25px, -25px);
+}
+
+.image-container:hover::before {
+    transform: translate(-15px, -15px);
+}
+
+.details {
+    flex: 1;
+    margin-top: 38px;
+}
+
+.details h2 {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.details .animated-text {
+    color: #ff5e57;
+}
+
+.details p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.details .name-of-someone {
+    color: #ff5e57;
+    font-style: italic;
+}
+
+.info-columns {
+    display: flex;
+    margin-top: 20px;
+}
+
+.column {
+    list-style: none;
+    padding: 0;
+    margin: 0 20px 0 0;
+}
+
+.details li {
+    margin: 10px 0;
+    position: relative;
+}
+
+.details i {
+    margin-right: 10px;
+}
+
+.content {
+    position: relative;
+    display: inline-block;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: #000000;
+    bottom: -2px;
+    width: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.details li:hover .content::before {
+    width: 100%;
+}
+
+.download-cv {
+    background-color: #ff5e57;
+    color: #fff;
+    border: none;
+    padding: 20px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.download-cv:hover {
+    background-color: #ff3d3d;
+}
+
+.services {
+    text-align: start;
+    padding: 50px;
+}
+
+.services .services-p{
+    margin-left: 150px;
+    color: #ff5e6c;
+    font-size: 18px;
+}
+
+.services .cards .card .icon-placeholder {
+    color: #ff5e6c;
+}
+
+.services h2 {
+    font-size: 20px;
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.icon-placeholder {
+    height: 50px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.cta {
+    margin-top: 50px;
+}
+
+.cta-link {
+    color: #000000;
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+}
+
+.cta-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.cta p {
+    margin-left: 150px;
+}
+
+.cta-link:hover::after {
+    width: 100%;
+}
+
+.portfolio-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.portfolio {
+    color: #ff5e6c;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+
+.featured-works {
+    font-size: 20px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+
+.filters span {
+    margin: 0 10px;
+    cursor: pointer;
+    color: #000;  
+}
+
+.filters .filter-item:hover {
+    color: #ff5e6c;  
+}
+
+.filters {
+    margin-left: 190px;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    width: 75%;  
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;  
+  }
+
+  .frame {
+    width: calc(33.33% - 20px); 
+    height: 270px;
+    overflow: hidden;
+    display: flex;
+  }
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s linear;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.ratios {
+    width: 100%;  
+    height: 25vh;  
+    position: relative;  
+  }
+  
+  .ratios-background {
+    width: 100%; 
+    height: 100%; 
+    position: absolute;  
+    top: 0; 
+    left: 0; 
+  }
+  
+  .ratios-container {
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    width: 100%;  
+    height: 100%;
+    position: relative;  
+  }
+  
+  .clients {
+    flex: 0 0 25%;  
+    color: white;
+    text-align: center;  
+  }
+
+  .latest-news {
+    width: 75%;
+    margin: auto;
+    padding: 40px 0;
+  }
+  
+  .latest-news h2 {
+    color: #e65f78;
+    margin-left: 25px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .latest-news h3 {
+    margin-left: 25px;
+    font-size: 2em;
+  }
+  
+  .news-articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .news-article {
+    width: 30%;
+    text-align: left;
+  }
+
+  .news-article img {
+    width: 100%;
+    transition: transform 0.5s linear; 
+    max-height: 100%;
+  }
+  
+  .news-article h4 {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+
+  .news-article h4:hover {
+    color: #e65f78;
+    transition: transform 1s linear;
+    cursor: pointer;
+  } 
+  
+  .news-article p {
+    font-size: 0.8em;
+    color: #888;
+  }
+  
+  .latest-news .news-articles .news-article:hover img {
+    transform: scale(1.1);
+  }
+
+  .latest-news .news-articles .news-article {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    height: 80vh;
+    width: 70%;
+    margin: auto;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 200px;
+}
+
+.contact-form h2 {
+    color: #e65f78;
+}
+
+.contact-form h1 {
+    font-size: 2em;
+}
+
+.contact-form p {
+    margin: 10px 0 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    padding: 20px 5px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #e65f78;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #e60067;
+}
+
+.contact-image {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: white;
+}
+.copyright {
+    margin: 0 20px;
+    margin-left: 300px;
+}
+.right-icons {
+    display: flex;
+    margin-right: 300px;
+    gap: 30px;
+    cursor: pointer;
+}
